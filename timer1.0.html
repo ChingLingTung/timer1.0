@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/timer1.0.css">
+  <title>timer1.0</title>
+</head>
+<body>
+  <div class="container">
+    <div class="tool">
+      <div class="progressbar">
+      <div class="bar"></div>
+      </div>
+      <div class="time"></div>
+      <div class="setTime">
+        <p class="setTime_text">請設定時間</p>
+        <form name='setTimeData' id="setTime_data" class="setTime_input">
+          <label for="hour">
+            <input type="text" name="hour" id="hour" min=0 value='0'/>時
+          </label>
+          <label for="minute">
+            <input type="text" name="minute" id="minute" min=0 max=59 value='0'/>分
+          </label>
+          <label for="second">
+            <input type="text" name="second" id="second" min=0 max=59 value='0'/>秒
+          </label>
+        </form>
+        <div>
+          <button class="resetTime_btn" onclick="resetTimeData()">重置</button>
+          <button class="setTime_btn" onclick="getTimeData()">確定</button>
+        </div>
+        <button class="start_btn" onclick="startCountTime()">開始倒數計時</button>
+        <button class="stop_btn" onclick="resetTimeData()">停止計時</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="timer1.0.js"></script>
+</body>
+</html>
